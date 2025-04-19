@@ -1,0 +1,6 @@
+framework module AdsyieldMaxAdapter {
+  umbrella header "AdsyieldMaxAdapter.h"
+  export *
+
+  module * { export * }
+}

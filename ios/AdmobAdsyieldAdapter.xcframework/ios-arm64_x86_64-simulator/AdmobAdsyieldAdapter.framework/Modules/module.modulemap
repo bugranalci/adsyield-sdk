@@ -1,0 +1,6 @@
+framework module AdmobAdsyieldAdapter {
+  umbrella header "AdmobAdsyieldAdapter.h"
+  export *
+
+  module * { export * }
+}

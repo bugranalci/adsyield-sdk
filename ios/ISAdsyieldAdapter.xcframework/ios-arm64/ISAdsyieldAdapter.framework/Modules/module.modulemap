@@ -1,0 +1,6 @@
+framework module ISAdsyieldAdapter {
+  umbrella header "ISAdsyieldAdapter.h"
+  export *
+
+  module * { export * }
+}
