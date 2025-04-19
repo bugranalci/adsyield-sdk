@@ -1,0 +1,39 @@
+plugins {
+    id 'maven-publish'
+}
+
+publishing {
+    publications {
+        adapterMax(MavenPublication) {
+            groupId = 'com.adsyield'
+            artifactId = 'adapter-for-max'
+            version = '1.0.0'
+            artifact file('adsyield_adapter_for_max.aar')
+        }
+
+        adapterIron(MavenPublication) {
+            groupId = 'com.adsyield'
+            artifactId = 'adapter-for-ironsource'
+            version = '1.0.0'
+            artifact file('adsyield_adapter_for_ironsource.aar')
+        }
+
+        adapterAdmob(MavenPublication) {
+            groupId = 'com.adsyield'
+            artifactId = 'adapter-for-admob'
+            version = '1.0.0'
+            artifact file('adsyield_adapter_for_admob.aar')
+        }
+    }
+
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/bugranalci/adsyield-sdk")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+    }
+}
